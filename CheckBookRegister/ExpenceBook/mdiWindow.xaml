@@ -1,0 +1,33 @@
+﻿<Window x:Class="ExpenceBook.mdiWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+   xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+   xmlns:mdi="clr-namespace:WPF.MDI;assembly=WPF.MDI"
+        
+   Title="mainWindow" Height="768" Width="1024" WindowState="Maximized">
+    <Grid >
+        <DockPanel  Margin="0,4,0,-4">
+            <Menu DockPanel.Dock="Top" RenderTransformOrigin="0.5,0.5"  >
+                <MenuItem Header="Add _Daily Expences" Name="dailyExpence" Click="dailyExpence_Click">
+                </MenuItem>
+                <Separator></Separator>
+                <MenuItem Header="View Detail Expences" Name="expenceList" Click="expenceList_Click">
+                </MenuItem>
+                <Separator></Separator>
+                <MenuItem Header="Graphical Report" Name="graphicalReport" Click="graphicalReport_Click">
+                </MenuItem>
+                <Separator></Separator>
+                <MenuItem Header="Account Type Report" Name="AccountView" Click="account_Click">
+                </MenuItem>
+                <Separator></Separator>
+                <MenuItem Header="Exit" Name="exitApp" Click="exitApp_Click">
+                </MenuItem>
+                <Separator></Separator>
+            </Menu>
+            <Canvas Background="Transparent" x:Name="MyCanvas" DockPanel.Dock="Top" Height="250"/>
+        </DockPanel>
+        <DockPanel Margin="0,25,0,0" >
+            <mdi:MdiContainer Theme="Aero" DockPanel.Dock="Top" Name="MainMdiContainer">
+            </mdi:MdiContainer>
+        </DockPanel>
+    </Grid>
+</Window>
